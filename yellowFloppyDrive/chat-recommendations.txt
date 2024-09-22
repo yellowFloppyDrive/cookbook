@@ -6,11 +6,13 @@ chat-recommendations.txt
 Terminal tools
 --------------------------------------------------------------------------------
 
-bat instead of cat - @Wgaffa
-gh instead of manual page fiddling for GitHub https://cli.github.com - @Wgaffa
+- bat instead of cat - @Wgaffa
+- gh instead of manual page fiddling for GitHub https://cli.github.com - @Wgaffa
 
-https://regexr.com/ - @JuiceMitApfelnDrin
-https://easings.net/ - @zanchho
+- https://github.com/iamkun/dayjs/ - @JuiceMitApfelnDrin & @uranium_cat911 -
+  day.js is a replacement for moment.js and moment.js is deprecated.
+- https://regexr.com/ - @JuiceMitApfelnDrin
+- https://easings.net/ - @zanchho
 
 --------------------------------------------------------------------------------
 History
