@@ -1,0 +1,19 @@
+################################################################################
+chat-recommendations.txt
+################################################################################
+
+--------------------------------------------------------------------------------
+Terminal tools
+--------------------------------------------------------------------------------
+
+bat instead of cat - @Wgaffa
+gh instead of manual page fiddling for GitHub https://cli.github.com - @Wgaffa
+
+https://regexr.com/ - @JuiceMitApfelnDrin
+https://easings.net/ - @zanchho
+
+--------------------------------------------------------------------------------
+History
+--------------------------------------------------------------------------------
+
+https://www.regexbuddy.com/buynow.html#pricing (The only RegEx tool that you could use back in the days) - @Wgaffa 
