@@ -1,0 +1,35 @@
+################################################################################
+neovim.txt
+################################################################################
+
+--------------------------------------------------------------------------------
+Install
+--------------------------------------------------------------------------------
+
+brew install neovim
+brew install ripgrep
+brew install font-hack-nerd-font
+# If using iTerm2, Settings -> Profile -> Text -> Font = Hack Nerd Font Mono
+
+--------------------------------------------------------------------------------
+Additional language highlighting setup
+--------------------------------------------------------------------------------
+
+- Add ensure_installed inside of treesitter.lsp.
+
+--------------------------------------------------------------------------------
+LSP setup
+--------------------------------------------------------------------------------
+
+- Use Mason to find a Language Server.
+- Add ensure_installed entry to the mason-lspconfig.lsp.
+- Go to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+- Find out how to run the setup of the LSP.
+- Add the language server setup() call to mason-lspconfig.lsp.
+
+--------------------------------------------------------------------------------
+Keymappings
+--------------------------------------------------------------------------------
+
+gx - Open link or path in default system app
+gf - Open link or path in VIM
