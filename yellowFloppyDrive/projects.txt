@@ -3,6 +3,7 @@ projects.txt
 ################################################################################
 
 - Snake clone (IN PROGRESS)
+  Learning WebGL
   https://github.com/yellowFloppyDrive/snake-clone
 
 - Hextrix
