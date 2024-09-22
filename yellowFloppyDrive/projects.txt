@@ -6,6 +6,8 @@ projects.txt
   Learning WebGL
   https://github.com/yellowFloppyDrive/snake-clone
 
+- Check out Crystal programming language
+
 - Hextrix
 
 - Space Invaders
