@@ -1,0 +1,9 @@
+################################################################################
+speedruns.txt
+################################################################################
+
+- Create a chat room with Socket.IO
+- when-then-run TODO CLI app
+- when-then-run TODO web app
+- when-then-run counter CLI
+- when-then-run counter web app

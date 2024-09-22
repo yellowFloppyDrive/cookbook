@@ -31,19 +31,19 @@ projects.txt
   functions and converting them into explanations.)
 
 - Counter console app
-  https://github.com/bitbytejoy/when-counter-console-app
+  https://github.com/yellowFloppyDrive/when-counter-console-app
 
 - Todo CLI
-  https://github.com/bitbytejoy/when-todo-cli
+  https://github.com/yellowFloppyDrive/when-todo-cli
 
-- Counter
-  https://github.com/bitbytejoy/when-counter
+- Counter web app
+  https://github.com/yellowFloppyDrive/when-counter
 
-- Teleprompter
-  https://github.com/bitbytejoy/when-teleprompter
+- Teleprompter web app
+  https://github.com/yellowFloppyDrive/when-teleprompter
 
 - Todo web app
-  https://github.com/bitbytejoy/when-todo-webapp
+  https://github.com/yellowFloppyDrive/when-todo-webapp
 
 - Chat web app & server
-  https://github.com/bitbytejoy/when-chat-app
+  https://github.com/yellowFloppyDrive/when-chat-app
