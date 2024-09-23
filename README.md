@@ -2,6 +2,12 @@
 
 ## Projects
 
+### ON HOLD
+
+- Snake clone (ON HOLD)
+  Learning WebGL
+  https://github.com/yellowFloppyDrive/snake-clone
+
 ### TODO
 
 - Setup a README.md for this repo.
@@ -13,9 +19,6 @@
 - OpenGL integration (Render a dot) - Zig
 - WebGL
 - Algorithms and data structures
-- Snake clone (ON HOLD)
-  Learning WebGL
-  https://github.com/yellowFloppyDrive/snake-clone
 - Check out Crystal programming language
 - Hextrix
 - Space Invaders
