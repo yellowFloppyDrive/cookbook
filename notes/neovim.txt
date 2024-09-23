@@ -33,3 +33,4 @@ Keymappings
 
 gx - Open link or path in default system app
 gf - Open link or path in VIM
+<C-x><C-n> - Autocomplete from buffers

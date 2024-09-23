@@ -10,9 +10,9 @@
 
 ### TODO
 
-- Add main URLs (Neovim, projects) to this repository REAME.md.
-- Better understanding of Zig usize and isize.
-- Enable Ctrl + N word complete from buffers.
+Neovim
+
+- Neovim: Enable Ctrl + N word complete from buffers.
 - Counter CLI - Zig
 - Todo app CLI - Zig
 - OpenGL integration (Render a dot) - Zig
