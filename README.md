@@ -2,6 +2,8 @@
 
 ## Projects
 
+### TODO
+
 - Setup a README.md for this repo.
 - Better understanding of Zig usize and isize.
 - Add main URLs (Neovim, projects) to this repository REAME.md.
@@ -28,6 +30,9 @@
 - Generating documentation with the when-then-run file structure (Reading when
   functions and converting them to sections in the documentation. Reading then
   functions and converting them into explanations.)
+
+### DONE
+
 - Counter console app
   https://github.com/yellowFloppyDrive/when-counter-console-app
 - Todo CLI
