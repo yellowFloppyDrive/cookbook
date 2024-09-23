@@ -1,21 +1,25 @@
 ################################################################################
-chat-recommendations.txt
+recommendations.txt
 ################################################################################
 
 --------------------------------------------------------------------------------
-Terminal tools
+Recommendations
 --------------------------------------------------------------------------------
 
 - bat instead of cat - @Wgaffa
+
 - gh instead of manual page fiddling for GitHub https://cli.github.com - @Wgaffa
 
 - https://github.com/iamkun/dayjs/ - @JuiceMitApfelnDrin & @uranium_cat911 -
   day.js is a replacement for moment.js and moment.js is deprecated.
+
 - https://regexr.com/ - @JuiceMitApfelnDrin
+
 - https://easings.net/ - @zanchho
 
 --------------------------------------------------------------------------------
-History
+Interesting stuff
 --------------------------------------------------------------------------------
 
-https://www.regexbuddy.com/buynow.html#pricing (The only RegEx tool that you could use back in the days) - @Wgaffa 
+- https://www.regexbuddy.com/buynow.html#pricing (The only RegEx tool that you
+  could use back in the days) - @Wgaffa 

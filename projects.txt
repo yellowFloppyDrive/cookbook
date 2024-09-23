@@ -2,7 +2,25 @@
 projects.txt
 ################################################################################
 
-- Snake clone (IN PROGRESS)
+- Setup a README.md for this repo.
+
+- Better understanding of Zig usize and isize.
+
+- Add main URLs (Neovim, projects) to this repository REAME.md.
+
+- Enable Ctrl + N word complete from buffers.
+
+- Counter CLI - Zig
+
+- Todo app CLI - Zig
+
+- OpenGL integration (Render a dot) - Zig
+
+- WebGL
+
+- Algorithms and data structures
+
+- Snake clone (ON HOLD)
   Learning WebGL
   https://github.com/yellowFloppyDrive/snake-clone
 
