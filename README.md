@@ -10,9 +10,8 @@
 
 ### TODO
 
-- Setup a README.md for this repo.
-- Better understanding of Zig usize and isize.
 - Add main URLs (Neovim, projects) to this repository REAME.md.
+- Better understanding of Zig usize and isize.
 - Enable Ctrl + N word complete from buffers.
 - Counter CLI - Zig
 - Todo app CLI - Zig
@@ -36,6 +35,8 @@
 
 ### DONE
 
+- Neovim config
+  https://github.com/yellowFloppyDrive/nvim
 - Counter console app
   https://github.com/yellowFloppyDrive/when-counter-console-app
 - Todo CLI
