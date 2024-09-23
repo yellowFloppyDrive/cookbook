@@ -48,10 +48,8 @@ test "always fails" {
 Data types
 --------------------------------------------------------------------------------
 
-????
-i - signed integer - Two's complement
-u - unsinged integer - General byte type number or character
-????
+i<size> - signed integer - Two's complement
+u<size> - unsinged integer - General byte type number or character
 
 bool - true | false (no auto coercion)
 
@@ -68,6 +66,8 @@ isize - integer of the pointer size
 
 f32 - Float 32 bit
 f128
+
+?bool - Optional boolean (can be null)
 
 --------------------------------------------------------------------------------
 Pointers
@@ -324,9 +324,27 @@ test "multi defer" {
 Error handling
 --------------------------------------------------------------------------------
 
+// Error sets & combining error sets
+
+const FileError = error{NotFound, PermissionDenied};
+const NetworkError = error{Timeout, ConnectionRefused};
+
+const CombinedError = FileError || NetworkError;
+
+fn mayFail() CombinedError!void {
+    // Can return errors from both sets
+}
+
 // Try and catch
 
 const expect = @import("std").testing.expect;
+
+fn divide(a: f32, b: f32) !f32 {
+    if (b == 0) {
+        return error.DivisionByZero;
+    }
+    return a / b;
+}
 
 fn failingFunction() error{Oops}!void {
     return error.Oops;

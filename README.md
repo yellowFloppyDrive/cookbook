@@ -12,7 +12,6 @@
 
 Neovim
 
-- Neovim: Enable Ctrl + N word complete from buffers.
 - Counter CLI - Zig
 - Todo app CLI - Zig
 - OpenGL integration (Render a dot) - Zig
@@ -49,3 +48,5 @@ Neovim
   https://github.com/yellowFloppyDrive/when-todo-webapp
 - Chat web app & server
   https://github.com/yellowFloppyDrive/when-chat-app
+- Echo CLI - Zig
+  https://github.com/yellowFloppyDrive/echo-cli-zig
