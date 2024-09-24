@@ -10,8 +10,7 @@
 
 ### TODO
 
-Neovim
-
+- Setup Catppuccin theme in iTerm
 - Counter CLI - Zig
 - Todo app CLI - Zig
 - OpenGL integration (Render a dot) - Zig
@@ -31,6 +30,7 @@ Neovim
 - Generating documentation with the when-then-run file structure (Reading when
   functions and converting them to sections in the documentation. Reading then
   functions and converting them into explanations.)
+- Write down all cool VIM keymappings (e.g. gx and gf)
 
 ### DONE
 
