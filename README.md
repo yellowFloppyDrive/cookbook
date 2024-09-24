@@ -26,6 +26,7 @@
 - Code editor
 - Website translator
 - SVG editor
+- Try Discord
 - Generating documentation with the when-then-run file structure (Reading when
   functions and converting them to sections in the documentation. Reading then
   functions and converting them into explanations.)
