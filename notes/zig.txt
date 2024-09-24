@@ -70,6 +70,12 @@ f128
 ?bool - Optional boolean (can be null)
 
 --------------------------------------------------------------------------------
+Operators
+--------------------------------------------------------------------------------
+
+Logical: and, or
+
+--------------------------------------------------------------------------------
 Pointers
 --------------------------------------------------------------------------------
 
@@ -85,7 +91,13 @@ test "pointers" {
     try expect(x == 2);
 }
 
-[*]T
+fn asBody(comptime print: fn (str: []const u8) void) void {
+    print("hello from function body");
+}
+
+fn asPointer(print: *const fn (str: []const u8) void) void {
+    print("hello from function pointer");
+}
 
 --------------------------------------------------------------------------------
 Figure out the pointer size on the machine
@@ -380,6 +392,9 @@ if (ent_num) |entity| {
 --------------------------------------------------------------------------------
 Packaging
 --------------------------------------------------------------------------------
+
+const std = @import("std");
+const PRINT_FAIL = @import("PRINT_FAIL.zig").PRINT_FAIL;
 
 The built-in function @import takes in a file, and gives you a struct type
 based on that file. All declarations labelled as pub (for public) will end up in

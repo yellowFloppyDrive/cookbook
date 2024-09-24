@@ -10,13 +10,12 @@
 
 ### TODO
 
-- Setup Catppuccin theme in iTerm
-- Counter CLI - Zig
 - Todo app CLI - Zig
 - OpenGL integration (Render a dot) - Zig
 - WebGL
 - Algorithms and data structures
 - Check out Crystal programming language
+- Write an automatic function to file refactoring tool for Zig
 - Hextrix
 - Space Invaders
 - Pong clone
@@ -50,3 +49,5 @@
   https://github.com/yellowFloppyDrive/when-chat-app
 - Echo CLI - Zig
   https://github.com/yellowFloppyDrive/echo-cli-zig
+- Counter CLI - Zig
+  https://github.com/yellowFloppyDrive/counter-cli-zig
