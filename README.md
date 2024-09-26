@@ -16,6 +16,7 @@
 - Algorithms and data structures
 - Check out Crystal programming language
 - Write an automatic function to file refactoring tool for Zig
+- Hextrix in terminal (like VIM, but for mind maps)
 - Hextrix
 - Space Invaders
 - Pong clone
