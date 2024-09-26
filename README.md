@@ -10,7 +10,7 @@
 
 ### TODO
 
-- Todo app CLI - Zig
+- Todo CLI - Zig
 - OpenGL integration (Render a dot) - Zig
 - WebGL
 - Algorithms and data structures
