@@ -14,6 +14,7 @@
 - OpenGL integration (Render a dot) - Zig
 - WebGL
 - Algorithms and data structures
+- Keystroke - Key visualizer for the stream
 - Check out Crystal programming language
 - Write an automatic function to file refactoring tool for Zig
 - Hextrix in terminal (like VIM, but for mind maps)
