@@ -10,6 +10,9 @@
 
 ### TODO
 
+- iTerm recap (DONE)
+- Neovim recap
+- Zig recap
 - yellowfloppydrive.com homepage
 - Todo CLI - Zig
 - OpenGL integration (Render a dot) - Zig

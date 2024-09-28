@@ -12,6 +12,14 @@ brew install font-hack-nerd-font
 # If using iTerm2, Settings -> Profile -> Text -> Font = Hack Nerd Font Mono
 
 --------------------------------------------------------------------------------
+Clone the Neovim config
+--------------------------------------------------------------------------------
+
+mkdir ~/.config/
+cd ~/.config/
+git clone git@github.com:yellowFloppyDrive/nvim.git
+
+--------------------------------------------------------------------------------
 Additional language highlighting setup
 --------------------------------------------------------------------------------
 
@@ -31,6 +39,35 @@ LSP setup
 Keymappings
 --------------------------------------------------------------------------------
 
+jk - up/down
+hl - left/right
+i - Insert mode
+v - Visual mode
+w - next word
+e - end of word
+^ - Goto start of the line
+$ - Goto end of line
+~ - Change casing
+I - Insert at the beginning of the line
+A - Insert at the end of the line
+r - Replace
+
+qq - Start recording macro
+@q - Play macro from q
+
+y - Copy selection
+yy - Copy line
+p - Paste
+<leader>y - Copy selection to clipboard
+<leader>p - Paste from clipboard
+
+<C-N> - Default keymapping for autocomplete from buffers
+<C-l> - Best custom autocomplete from buffers keymap
+
+gd - Go to definition
+<leader>r - Rename
+<leader>a - Code action
+<C-n> - Autocomplete from the LSP autcomplete plugin
+
 gx - Open link or path in default system app
 gf - Open link or path in VIM
-<C-N> - Autocomplete from buffers
