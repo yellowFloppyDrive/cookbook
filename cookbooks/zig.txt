@@ -12,14 +12,23 @@ brew install zig
 Initialize project
 --------------------------------------------------------------------------------
 
+# Initialize with package manager & tests
 zig init
+
+# Quick & dirty
+mkdir app
+cd app
+touch main.zig
 
 --------------------------------------------------------------------------------
 Build, test and run project
 --------------------------------------------------------------------------------
 
+# For projects initialized with zig init
 zig build test
 zig build run
+
+# For quick & dirty projects
 zig run main.zig
 zig test test.zig
 
@@ -34,50 +43,37 @@ pub fn main() void {
 }
 
 --------------------------------------------------------------------------------
-Test
---------------------------------------------------------------------------------
-
-const std = @import("std");
-const expect = std.testing.expect;
-
-test "always fails" {
-    try expect(false);
-}
-
---------------------------------------------------------------------------------
 Data types
 --------------------------------------------------------------------------------
 
-i<size> - signed integer - Two's complement
-u<size> - unsinged integer - General byte type number or character
-
 bool - true | false (no auto coercion)
 
-u2
-u8 - unsinged 8 bit
-u16
-u32 - unsigned 32 bit
+Template for integer types
+i<size> - signed integer - Two's complement
+u<size> - unsigned integer - General byte type number or character
 
+u2 - unsigned integer 2 bit
+u8 - unsigned integer 8 bit
+u16 - unsigned integer 16 bit
+u32 - unsigned integer 32 bit
 i8 - integer 8 bit
 i32 - integer 32 bit
 
-usize - integer of the pointer size
+usize - unsigned integer of the pointer size
 isize - integer of the pointer size
 
 f32 - Float 32 bit
-f128
+f128 - Float 128 bit float
 
 ?bool - Optional boolean (can be null)
 
 --------------------------------------------------------------------------------
-Operators
---------------------------------------------------------------------------------
-
-Logical: and, or
-
---------------------------------------------------------------------------------
 Pointers
 --------------------------------------------------------------------------------
+
+*u8 // Zig single element pointer
+[*]u8 // Zig multi-element pointer (contains first element pointer and length)
+[c*]u8 // C pointer
 
 const expect = @import("std").testing.expect;
 
@@ -91,12 +87,17 @@ test "pointers" {
     try expect(x == 2);
 }
 
-fn asBody(comptime print: fn (str: []const u8) void) void {
-    print("hello from function body");
-}
+--------------------------------------------------------------------------------
+Defers
+--------------------------------------------------------------------------------
 
-fn asPointer(print: *const fn (str: []const u8) void) void {
-    print("hello from function pointer");
+test "multi defer" {
+    var x: f32 = 5;
+    {
+        defer x += 2;
+        defer x /= 2;
+    }
+    try expect(x == 4.5);
 }
 
 --------------------------------------------------------------------------------
@@ -111,24 +112,15 @@ pub fn main() void {
 }
 
 --------------------------------------------------------------------------------
-Arrays
---------------------------------------------------------------------------------
-
-const array_with_5_u8 = [5]u8{ 'h', 'e', 'l', 'l', 'o' };
-const array_with_5_u8_inferred = [_]u8{ 'w', 'o', 'r', 'l', 'd' };
-const length = array.len;
-
---------------------------------------------------------------------------------
 Optionals
 --------------------------------------------------------------------------------
 
+// orelse operator
 const a: ?f32 = null;
 const fallback_value: f32 = 0;
 const b = a orelse fallback_value;
-try expect(b == 0);
-try expect(@TypeOf(b) == f32);
 
-
+// if unwrap
 const maybe_num: ?usize = 10;
 if (maybe_num) |n| {
     // Operate with n
@@ -137,11 +129,37 @@ if (maybe_num) |n| {
 }
 
 --------------------------------------------------------------------------------
+Operators
+--------------------------------------------------------------------------------
+
+Algebraic: +, -, *, /, %, +=, -=, *=, /=, %=
+Bitwise: <<, >>, &, |, ^, ~
+Logical: and, or, !
+Comparison: ==, !=, <, >, <=, >=
+Pointer: p.*, &p
+Errors: errorSetA || errorSetB
+Optionals: orelse
+
+--------------------------------------------------------------------------------
+Arrays
+--------------------------------------------------------------------------------
+
+const array_with_5_u8 = [5]u8{ 'h', 'e', 'l', 'l', 'o' };
+const array_with_5_u8_inferred = [_]u8{ 'w', 'o', 'r', 'l', 'd' };
+const length = array.len;
+
+--------------------------------------------------------------------------------
 Slices
 --------------------------------------------------------------------------------
 
 const array = [_]u8{ 1, 2, 3, 4, 5 };
 const slice = array[0..3];
+
+// Under the hood
+{
+  firstElement: [*c]u8;
+  len: usize;
+}
 
 --------------------------------------------------------------------------------
 Structs
@@ -159,12 +177,24 @@ const Stuff = struct {
     }
 };
 
+// Automatic dereferencing for sub-structs
+
 test "automatic dereference" {
+    const z: u8 = 3;
     var thing = Stuff{ .x = 10, .y = 20 };
+
     thing.swap();
+
     try expect(thing.x == 20);
     try expect(thing.y == 10);
+    try expect(thing.z.* == 3);
 }
+
+--------------------------------------------------------------------------------
+Enum
+--------------------------------------------------------------------------------
+
+const Direction = enum { north, south, east, west };
 
 --------------------------------------------------------------------------------
 Unions
@@ -187,14 +217,10 @@ test "switch on tagged union" {
 }
 
 --------------------------------------------------------------------------------
-Enum
---------------------------------------------------------------------------------
-
-const Direction = enum { north, south, east, west };
-
---------------------------------------------------------------------------------
 @Vector
 --------------------------------------------------------------------------------
+
+// SIMD - Single Instruction Multiple Data
 
 const meta = @import("std").meta;
 
@@ -250,6 +276,7 @@ outer: for ([_]i32{ 1, 2, 3, 4, 5, 6, 7, 8 }) |_| {
 }
 
 // Multi-array iteration
+
 const string = [_]u8{ 'a', 'b', 'c' };
 const indices = [_]i8{ 0, 1, 2 };
 const names = [_]u8{ 'd', 'e', 'f' };
@@ -301,7 +328,6 @@ fn addFive(x: u32) u32 {
 }
 
 // Labeled blocks (anonymous functions)
-
 const count = blk: {
     var sum: u32 = 0;
     var i: u32 = 0;
@@ -311,7 +337,6 @@ const count = blk: {
 // count is 45
 
 // Expression loop (incline reduce)
-
 var i = begin;
 return while (i < end) : (i += 1) {
     if (i == number) {
@@ -319,17 +344,14 @@ return while (i < end) : (i += 1) {
     }
 } else false;
 
---------------------------------------------------------------------------------
-Defers
---------------------------------------------------------------------------------
+// Functions evaluated at comptime
+fn asBody(comptime print: fn (str: []const u8) void) void {
+    print("hello from function body");
+}
 
-test "multi defer" {
-    var x: f32 = 5;
-    {
-        defer x += 2;
-        defer x /= 2;
-    }
-    try expect(x == 4.5);
+// Function pointers - dynamic function references
+fn asPointer(print: *const fn (str: []const u8) void) void {
+    print("hello from function pointer");
 }
 
 --------------------------------------------------------------------------------
@@ -387,6 +409,27 @@ if (ent_num) |entity| {
 } else |err| {
     _ = err catch {};
     unreachable;
+}
+
+// while catch
+
+while (optionalValue()) |non_null| {
+    // The while loop
+}
+
+// try-catch-switch
+
+callFunction() catch |err| switch (err) { error.Name => 'a' };
+
+--------------------------------------------------------------------------------
+Test
+--------------------------------------------------------------------------------
+
+const std = @import("std");
+const expect = std.testing.expect;
+
+test "always fails" {
+    try expect(false);
 }
 
 --------------------------------------------------------------------------------

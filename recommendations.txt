@@ -23,3 +23,9 @@ Interesting stuff
 
 - https://www.regexbuddy.com/buynow.html#pricing (The only RegEx tool that you
   could use back in the days) - @Wgaffa 
+- comptime in Zig is like static eval (Gets compiled and evaluated before
+  link) - @grayhatter_
+- [*c] in Zig is a simple C pointer - @grayhatter_
+- while(maybeNull()) |non_null| {} in Zig - @grayhatter_
+- callable() catch |err| switch (err) { error.Name => ... }; - @grayhatter_
+- usize and isize are pointer sized integers - @uranium_cat911

@@ -51,6 +51,7 @@ $ - Goto end of line
 I - Insert at the beginning of the line
 A - Insert at the end of the line
 r - Replace
+. - Repeats last action
 
 qq - Start recording macro
 @q - Play macro from q
