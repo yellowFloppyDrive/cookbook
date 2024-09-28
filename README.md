@@ -19,6 +19,8 @@
 - Check out Crystal programming language
 - Write an automatic function to file refactoring tool for Zig
 - Hextrix in terminal (like VIM, but for mind maps)
+- Image to ASCII art converter
+- GIF to ASCII art converter
 - Hextrix
 - Space Invaders
 - Pong clone
