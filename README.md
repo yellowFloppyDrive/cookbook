@@ -10,6 +10,7 @@
 
 ### TODO
 
+- yellowfloppydrive.com homepage
 - Todo CLI - Zig
 - OpenGL integration (Render a dot) - Zig
 - WebGL
