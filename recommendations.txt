@@ -29,3 +29,5 @@ Interesting stuff
 - while(maybeNull()) |non_null| {} in Zig - @grayhatter_
 - callable() catch |err| switch (err) { error.Name => ... }; - @grayhatter_
 - usize and isize are pointer sized integers - @uranium_cat911
+- https://vitejs.dev/guide/static-deploy - Vite Github Pages deployment
+  config - @uranium_cat911

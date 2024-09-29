@@ -4,8 +4,9 @@
 
 ### TODO
 
-- Convert recommendations to leaderboards.
-- yellowfloppydrive.com homepage.
+- yellowfloppydrive.com homepage. (DONE)
+- Move all the stuff from the cookbook repository to the homepage.
+- Update Twitch links in the about section.
 - (ON HOLD) Todo CLI - Zig - https://github.com/yellowFloppyDrive/todo-cli-zig
 - OpenGL integration (Render a dot) - Zig
 - (ON HOLD) Snake clone.
