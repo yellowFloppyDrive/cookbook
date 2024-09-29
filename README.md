@@ -2,18 +2,14 @@
 
 ## Projects
 
-### ON HOLD
-
-- Snake clone (ON HOLD)
-  Learning WebGL
-  https://github.com/yellowFloppyDrive/snake-clone
-
 ### TODO
 
-- Todo CLI - Zig - https://github.com/yellowFloppyDrive/todo-cli-zig
-  (IN PROGRESS)
 - yellowfloppydrive.com homepage
+- (ON HOLD) Todo CLI - Zig - https://github.com/yellowFloppyDrive/todo-cli-zig
 - OpenGL integration (Render a dot) - Zig
+- (ON HOLD) Snake clone 
+  Learning WebGL
+  https://github.com/yellowFloppyDrive/snake-clone
 - WebGL
 - Algorithms and data structures
 - Keystroke - Key visualizer for the stream
